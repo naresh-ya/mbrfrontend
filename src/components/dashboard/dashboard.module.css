@@ -1,0 +1,232 @@
+/* ---------- PAGE LAYOUT ---------- */
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+  padding: 32px 40px;
+  font-family: system-ui, sans-serif;
+}
+
+.greeting {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.greeting h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.name {
+  color: #0066cc;
+}
+
+.greeting p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* ---------- SEARCH BAR ---------- */
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  border: 2px solid #1b78e2;
+  border-radius: 10px;
+  padding: 6px 12px;
+  max-width: 630px;
+  margin: auto;
+  background: white;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.icons {
+  display: flex;
+  gap: 6px;
+}
+
+.iconBtn,
+.sendBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sendBtn {
+  color: #1b78e2;
+}
+
+/* ---------- PROMPT CARDS ---------- */
+
+.prompts {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.promptCard {
+  background: #f3f4f7;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.promptIcon {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* ---------- SECTION HEADER ---------- */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sectionHeader a {
+  font-size: 12px;
+  color: #1b78e2;
+  white-space: nowrap;
+}
+
+/* ---------- KPI CHIPS ---------- */
+
+.kpiRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.kpiChip {
+  padding: 8px 14px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+}
+
+.kpiValueUp {
+  background: #2c8de9;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.kpiValueDown {
+  background: #e43857;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* ---------- EXECUTIVE NARRATIVE ---------- */
+
+.cardGrid {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  gap: 14px;
+  width: 48%;
+}
+
+.card img {
+  width: 160px;
+  height: 110px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* ---------- INDICATORS ---------- */
+
+.indicatorRow {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.indicator {
+  background: #eef6ff;
+  padding: 16px;
+  border-radius: 12px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indicator .title {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.indicator .value {
+  font-size: 22px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.indicator .badge {
+  padding: 3px 8px;
+  background: #d0f0da;
+  color: #0f6b27;
+  font-size: 12px;
+  width: fit-content;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+/* Chart placeholder */
+.indicator .chart {
+  background: linear-gradient(180deg, #7fb3ff, #d8e9ff);
+  border-radius: 8px;
+  height: 80px;
+  margin-top: 8px;
+}
+
+/* Add box */
+.addCard {
+  width: 240px;
+  background: #eef6ff;
+  border: 2px dashed #7bb4ff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  color: #1b78e2;
+}

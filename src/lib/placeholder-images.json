@@ -1,0 +1,52 @@
+{
+  "placeholderImages": [
+    {
+      "id": "total-revenue-chart",
+      "description": "A line chart showing total revenue over time.",
+      "imageUrl": "https://picsum.photos/seed/revenue/600/400",
+      "imageHint": "revenue chart"
+    },
+    {
+      "id": "profit-margin-chart",
+      "description": "A line chart showing profit margin over time.",
+      "imageUrl": "https://picsum.photos/seed/profit/600/400",
+      "imageHint": "profit chart"
+    },
+    {
+      "id": "customer-acquisition-chart",
+      "description": "A bar chart showing new customer acquisition.",
+      "imageUrl": "https://picsum.photos/seed/customers/600/400",
+      "imageHint": "customer chart"
+    },
+    {
+      "id": "customer-churn-chart",
+      "description": "A line chart showing customer churn rate.",
+      "imageUrl": "https://picsum.photos/seed/churn/600/400",
+      "imageHint": "churn chart"
+    },
+    {
+      "id": "website-traffic-chart",
+      "description": "A chart showing website traffic.",
+      "imageUrl": "https://picsum.photos/seed/traffic/600/400",
+      "imageHint": "traffic chart"
+    },
+    {
+      "id": "conversion-rate-chart",
+      "description": "A chart showing conversion rate.",
+      "imageUrl": "https://picsum.photos/seed/conversion/600/400",
+      "imageHint": "conversion chart"
+    },
+    {
+      "id": "avg-order-value-chart",
+      "description": "A chart showing average order value.",
+      "imageUrl": "https://picsum.photos/seed/aov/600/400",
+      "imageHint": "value chart"
+    },
+    {
+      "id": "social-media-engagement-chart",
+      "description": "A chart showing social media engagement.",
+      "imageUrl": "https://picsum.photos/seed/social/600/400",
+      "imageHint": "social media"
+    }
+  ]
+}

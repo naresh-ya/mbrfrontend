@@ -1,0 +1,1043 @@
+/* ============================================================
+   PMI Executive Narrative — Financial Report CSS Module
+   ============================================================ */
+
+/* ── Root shell ─────────────────────────────────────────────── */
+.story {
+  width: 100%;
+  background: #f0f2f5;
+  color: #111;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  padding: 24px 0 80px;
+}
+
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── Topbar ─────────────────────────────────────────────────── */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  font-size: 20px;
+  font-weight: 800;
+  background: #0a0e27;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 12px;
+  letter-spacing: 1px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.kicker {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a0e27;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef3ff;
+  color: #2643a3;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tagDot {
+  width: 7px;
+  height: 7px;
+  background: #2643a3;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Top-right action */
+.topAction {
+  display: flex;
+  align-items: center;
+}
+
+.topActionBtn {
+  background: #1a56db;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(26,86,219,0.12);
+}
+
+.topActionBtn:hover { background: #1347b8; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 18px;
+}
+
+.heroLeft {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  color: #0a0e27;
+  text-align: center;
+}
+
+.lead {
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+/* ── Risk chips ─────────────────────────────────────────────── */
+.riskChips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
+  margin-top: 28px;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.riskChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 0 0 1px #e0e3ea;
+  transition: all 0.18s ease;
+  color: #374151;
+}
+
+.riskChip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.riskChipHigh {
+  background: #fff0f0;
+  color: #b30000;
+  box-shadow: 0 0 0 1px #ffc0c0;
+}
+
+.riskChipMedium {
+  background: #fff8ed;
+  color: #a36b00;
+  box-shadow: 0 0 0 1px #ffd080;
+}
+
+.riskChipDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.8;
+}
+
+.riskChipText {
+  white-space: nowrap;
+}
+
+.riskChipArrow {
+  opacity: 0.6;
+  font-weight: 900;
+}
+
+/* ── Signal card (hero right) ───────────────────────────────── */
+.heroRight {
+  flex: 1;
+  min-width: 320px;
+}
+
+.signalCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.signalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.signalTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0a0e27;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.warnBadge {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.signalRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 0;
+}
+
+.signalMetric { display: flex; flex-direction: column; gap: 4px; }
+
+.metricLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.metricValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0a0e27;
+}
+
+.emph {
+  font-size: 16px;
+  color: #b30000;
+}
+
+.signalDivider {
+  height: 1px;
+  background: #f0f2f5;
+  margin: 10px 0;
+}
+
+.signalViz {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.signalNote {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* ── Chart overlay helpers ──────────────────────────────────── */
+.chartLegend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.divergenceGap {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.gapBadge {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+/* ── KPI strip ──────────────────────────────────────────────── */
+.kpis {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+/* Spacer to preserve layout when KPI strip is hidden */
+.kpiSpacer {
+  height: 48px;
+  margin-bottom: 14px;
+}
+
+.kpi {
+  flex: 1;
+  background: #fff;
+  padding: 16px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #e5e7eb;
+  min-width: 0;
+}
+
+.good { border-left-color: #0a8f08; }
+.warn { border-left-color: #ff9800; }
+.risk { border-left-color: #d32f2f; }
+.neutral { border-left-color: #cbd5e1; }
+
+.kpiIcon {
+  color: #1a56db;
+  flex-shrink: 0;
+}
+
+.kpiIcon svg {
+  opacity: 0.85;
+}
+
+.kpiBody {
+  min-width: 0;
+}
+
+.kpiLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kpiValue {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0a0e27;
+  line-height: 1.2;
+}
+
+.kpiDelta {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #0a8f08;
+  font-weight: 600;
+}
+
+.kpiHint {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* ── Section separator ──────────────────────────────────────── */
+.sectionSep {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.sectionSepLine {
+  flex: 1;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.sectionSepLabel {
+  font-size: 11px;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+/* ── Story panels (Acts grid) ───────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.panelTitle {
+  font-weight: 800;
+  font-size: 16px;
+  color: #0a0e27;
+}
+
+.ribbon {
+  padding: 3px 12px;
+  border-radius: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.goodRibbon  { background: #e6f7e6; color: #0c6c07; }
+.warnRibbon  { background: #fff5da; color: #a36b00; }
+.riskRibbon  { background: #ffe8e8; color: #b30000; }
+
+.bullets {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: #374151;
+  line-height: 1.65;
+}
+
+.callout {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.calloutWarn {
+  background: #fff8e6;
+  color: #856404;
+  border-left: 3px solid #f59e0b;
+}
+
+.calloutTitle {
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.calloutText {
+  line-height: 1.5;
+}
+
+.microViz {
+  margin-top: 14px;
+}
+
+.microTitle {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+/* ── Mini bar chart (kept for backwards compat) ─────────────── */
+.miniChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 50px;
+}
+
+.miniBar {
+  width: 6px;
+  background: #4a6cf7;
+  border-radius: 2px;
+}
+
+/* ── Inventory blocks (kept) ─────────────────────────────────── */
+.blocks {
+  display: flex;
+  gap: 3px;
+  height: 26px;
+}
+
+.block {
+  width: 6px;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+/* ── State card (kept for backwards compat) ─────────────────── */
+.stateCard {
+  margin-top: 14px;
+  background: #f8f9fc;
+  padding: 14px;
+  border-radius: 10px;
+}
+.stateTitle { font-weight: 600; margin-bottom: 10px; }
+.stateStats { display: flex; justify-content: space-between; font-size: 13px; }
+.stateK { opacity: 0.6; }
+.stateV { font-weight: 600; }
+.stateWarn { color: #b30000; }
+
+/* ── Market share bars ──────────────────────────────────────── */
+.shareBarGroup {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shareBarRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shareBarLabel {
+  width: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  flex-shrink: 0;
+}
+
+.shareBarTrack {
+  flex: 1;
+  height: 10px;
+  background: #f0f4f8;
+  border-radius: 3px;
+}
+
+.shareBarFill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.shareBarValue {
+  width: 32px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+  color: #0a0e27;
+}
+
+.shareBarDelta {
+  width: 36px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ── State table ────────────────────────────────────────────── */
+.stateTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  margin-top: 12px;
+}
+
+.stateTable th {
+  background: #f8f9fc;
+  padding: 7px 10px;
+  text-align: left;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.stateTable td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.stateTable tbody tr:hover {
+  background: #f8f9fc;
+}
+
+.rowWarn {
+  background: #fffbfb !important;
+}
+
+.cellBold { font-weight: 700; }
+.cellRed   { color: #d32f2f; font-weight: 700; }
+.cellGreen { color: #0a8f08; font-weight: 700; }
+
+.tagWarn {
+  background: #fff0f0;
+  color: #b30000;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.tagGood {
+  background: #e6f7e6;
+  color: #0c6c07;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.tagNeutral {
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* ── Launch tracker ─────────────────────────────────────────── */
+.launchTracker {
+  margin-top: 12px;
+  background: #f8f9fc;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.launchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.launchTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0a0e27;
+}
+
+.launchStatus {
+  font-size: 10.5px;
+  color: #d32f2f;
+  font-weight: 700;
+  background: #fff0f0;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+.launchRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.launchRowLabel {
+  font-size: 11.5px;
+  color: #374151;
+  width: 168px;
+  flex-shrink: 0;
+}
+
+.launchBarWrap {
+  flex: 1;
+  height: 8px;
+  background: #e8ecf5;
+  border-radius: 4px;
+}
+
+.launchBar {
+  height: 100%;
+  border-radius: 4px;
+  min-width: 4px;
+}
+
+.launchRowNums {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 72px;
+  flex-shrink: 0;
+  font-size: 11.5px;
+}
+
+.launchTarget {
+  color: #9ca3af;
+}
+
+/* ── AI Insight callout ─────────────────────────────────────── */
+.aiInsight {
+  background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
+  border: 1px solid #c7d2fe;
+  border-left: 3px solid #4338ca;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 14px;
+}
+
+.aiInsightBadge {
+  display: inline-block;
+  background: #4338ca;
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.aiInsightText {
+  margin: 0;
+  font-size: 12px;
+  color: #3730a3;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* ── Watchout cards (risk section) ──────────────────────────── */
+.watchGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.watchCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  border-top: 3px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.watchHigh   { border-top-color: #d32f2f; }
+.watchMedium { border-top-color: #ff9800; }
+
+.watchHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.watchTitle {
+  font-weight: 800;
+  font-size: 14.5px;
+  color: #0a0e27;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.watchDesc {
+  font-size: 12.5px;
+  color: #374151;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.watchSignal {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.watchDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #94a3b8;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.watchCta {
+  background: none;
+  border: none;
+  color: #1a56db;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 0 0;
+  text-align: left;
+}
+
+.watchCta:hover { text-decoration: underline; }
+
+/* ── Action playbook ────────────────────────────────────────── */
+.actionSection {
+  margin-bottom: 32px;
+}
+
+.actionSectionTitle {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0a0e27;
+  margin-bottom: 14px;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.actionCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  border-bottom: 3px solid #1a56db;
+}
+
+.actionIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eef3ff;
+  color: #1a56db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.actionTitle {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #0a0e27;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.actionBullets {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  color: #374151;
+  line-height: 1.65;
+}
+
+/* ── Footnotes ──────────────────────────────────────────────── */
+.footnotes {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footnote {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 4px 0;
+  line-height: 1.45;
+}
+
+/* ── Drawer overlay ─────────────────────────────────────────── */
+.drawerRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+
+.drawerOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 440px;
+  height: 100%;
+  background: #fff;
+  border-left: 1px solid #e5e7eb;
+  padding: 24px;
+  overflow-y: auto;
+  animation: slideIn 0.22s ease forwards;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(32px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.drawerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.drawerTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.drawerTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0a0e27;
+  line-height: 1.3;
+}
+
+.drawerPill {
+  padding: 3px 12px;
+  font-size: 11px;
+  border-radius: 20px;
+  font-weight: 700;
+  display: inline-block;
+  width: fit-content;
+}
+
+.pillHigh   { background: #ffe8e8; color: #b30000; }
+.pillMedium { background: #fff5da; color: #a36b00; }
+
+.drawerClose {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.drawerClose:hover { background: #f3f4f6; }
+
+.drawerBody {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.drawerSection {
+  margin-top: 20px;
+}
+
+.drawerCallout {
+  background: #f6f3ff;
+  padding: 14px;
+  border-radius: 10px;
+  border-left: 3px solid #7c3aed;
+}
+
+.drawerLabel {
+  font-size: 11px;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.drawerText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.drawerList {
+  padding-left: 20px;
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.drawerBottom {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.drawerCta {
+  width: 100%;
+  padding: 12px;
+  background: #1a56db;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.drawerCta:hover { background: #1347b8; }

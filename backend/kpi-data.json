@@ -1,0 +1,1695 @@
+{
+  "userName": "Sajal Gupta",
+  "generated_at": "2026-03-30 17:27",
+  "source_file": "C:\\Users\\sgupta86\\Downloads\\CodebaseMBR\\kpi-data.json",
+  "model": "genaiassets_gpt4o",
+  "kpis": [
+    {
+  "id": "secondary-volume-sales",
+  "category": "Million sticks",
+  "sub_category": "Current Month Secondary Sales",
+  "title": "Secondary Volume Sales",
+  "subtitle": "Growth vs Prior Year",
+  "actual": {
+    "value": "1,071.3",
+    "trend": "increase"
+  },
+  "target": {
+    "value": "+32.5% YoY"
+  },
+  "forecast": {
+    "label": "Next",
+    "value": "N/A",
+    "trend": "increase"
+  },
+  "confidence": {
+    "level": "High"
+  },
+  "advanceIndicator": {
+    "label": "Advance Indicator",
+    "value": "+8.7%",
+    "trend": "increase",
+    "text": "Acceleration confirms Q4 inflection while PF miss signals shortfall."
+  },
+  "achievementVsRF": {
+    "label": "Achievement vs. RF",
+    "value": "90.7%",
+    "status": "At Risk",
+    "text": "Over ambitious RF planning or real sell-out gaps in coverage and last-mile availability."
+  },
+  "segmentMix": {
+    "RF": {
+      "value": 730.8,
+      "status": "On Track"
+    },
+    "KS_Premium": {
+      "value": 254.8,
+      "status": "On Track"
+    },
+    "KS_High": {
+      "value": 82.6,
+      "status": "At Risk"
+    },
+    "PF": {
+      "value": 3.2,
+      "status": "Off Track"
+    },
+    "insight": "RF anchors the portfolio with a dominant 68% share, while KS Premium strengthens premiumization at 24%, as KS High shows early signs of squeeze and PF remains structurally negligible."
+  },
+
+  "causalLinks": {
+    "causalImpact": "Driven by base effects, wider distribution, effective promotions, and year‑end consumption uplift.",
+    "narrative": "December IMS reflects expanded distribution, trade promotion effectiveness, and end‑year uplift."
+  },
+  "causalLinksExtended": [
+    "The Advance Indicator confirms a demand inflection in Q4.",
+    "99M RF gap indicates under‑delivery ahead of Q1 2026.",
+    "RF anchors the portfolio with a dominant 68% share, while KS Premium strengthens premiumization; KS High shows early squeeze signs and PF remains marginal."
+  ],
+
+  "description": "Current month secondary sales measured in million sticks, compared YoY to track consumption trends.",
+  
+  "change": 32.5,
+  "changeType": "increase",
+
+  "comparison": "+32.5% vs LY (722.5)",
+  "statusTag": " high",
+  "narrative": "IMS leads LY by +210 Mio sticks",
+"chartData": [
+    {
+      "month": "Jan'25",
+      "value": 858.238259
+    },
+    {
+      "month": "Feb'25",
+      "value": 816.306747
+    },
+    {
+      "month": "Mar'25",
+      "value": 883.821658
+    },
+    {
+      "month": "Apr'25",
+      "value": 856.340629
+    },
+    {
+      "month": "May'25",
+      "value": 877.024144
+    },
+    {
+      "month": "Jun'25",
+      "value": 891.89071
+    },
+    {
+      "month": "Jul'25",
+      "value": 876.091944
+    },
+    {
+      "month": "Aug'25",
+      "value": 918.360434
+    },
+    {
+      "month": "Sep'25",
+      "value": 973.082883
+    },
+    {
+      "month": "Oct'25",
+      "value": 969.333925
+    },
+    {
+      "month": "Nov'25",
+      "value": 1013.211586
+    },
+    {
+      "month": "Dec'25",
+      "value": 1071.3
+    }
+      ]
+    },
+    {
+      "id": "bias",
+      "category": "Operations",
+      "sub_category": "Operations",
+      "title": "Bias",
+      "subtitle": "Indicates forecast accuracy trends",
+      "actual": {
+        "value": "40.0%",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "<6%"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "92.2%",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "Signals forecasts much closer to reality, reducing operational risk and unnecessary inventory swings.",
+        "narrative": "The significant decrease in bias indicates improved forecasting accuracy, likely driven by enhanced data analytics and adjustments in forecasting models. This improvement correlates with better alignment in inventory management and reduced operational costs. However, the forecast for the next period suggests potential volatility, posing a risk of reverting to over-forecasting if corrective measures are not sustained."
+      },
+      "description": "Systematic over/under-forecasting at M-1 and M-3 (positive = over-forecast).",
+      "change": -83.47,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 7.44
+        },
+        {
+          "month": "Feb'25",
+          "value": -4.95
+        },
+        {
+          "month": "Mar'25",
+          "value": -6.09
+        },
+        {
+          "month": "Apr'25",
+          "value": -2.47
+        },
+        {
+          "month": "May'25",
+          "value": -4.25
+        },
+        {
+          "month": "Jun'25",
+          "value": 2.94
+        },
+        {
+          "month": "Jul'25",
+          "value": 1.42
+        },
+        {
+          "month": "Aug'25",
+          "value": -2.78
+        },
+        {
+          "month": "Sep'25",
+          "value": 1.98
+        },
+        {
+          "month": "Oct'25",
+          "value": 2.42
+        },
+        {
+          "month": "Nov'25",
+          "value": 0.4
+        },
+            {
+      "month": "Dec'25",
+      "value": 1.3
+    }
+      ]
+    },
+    {
+      "id": "customer-fill-rate",
+      "category": "Operations",
+      "sub_category": "Operations",
+      "title": "Customer Fill Rate",
+      "subtitle": "Measures timely order fulfillment",
+      "actual": {
+        "value": "99.9%",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "99.5%"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "99.9%",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.00% from stable supply chain operations",
+        "narrative": "The Customer Fill Rate remains stable at 99.9%, driven by consistent supply chain performance and effective inventory management. This stability correlates with the unchanged distributor fill rate and suggests a low risk of disruption in the near term. However, the low trend confidence indicates potential volatility, which could impact future performance if supply chain conditions change."
+      },
+      "description": "Percentage of customer orders fulfilled on-time and in-full.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 99.73
+        },
+        {
+          "month": "Feb'25",
+          "value": 99.9
+        },
+        {
+          "month": "Mar'25",
+          "value": 99.9
+        },
+        {
+          "month": "Apr'25",
+          "value": 99.9
+        },
+        {
+          "month": "May'25",
+          "value": 99.9
+        },
+        {
+          "month": "Jun'25",
+          "value": 99.9
+        },
+        {
+          "month": "Jul'25",
+          "value": 99.9
+        },
+        {
+          "month": "Aug'25",
+          "value": 99.58
+        },
+        {
+          "month": "Sep'25",
+          "value": 99.9
+        },
+        {
+          "month": "Oct'25",
+          "value": 99.9
+        },
+        {
+          "month": "Nov'25",
+          "value": 99.9
+        }
+      ]
+    },
+    {
+      "id": "doi-pmi-gpi-and-trade",
+      "category": "Operations",
+      "sub_category": "Operations",
+      "title": "DOI - PMI, GPI and Trade",
+      "subtitle": "Measures inventory turnover efficiency",
+      "actual": {
+        "value": "99.9%",
+        "trend": "increase"
+      },
+      "target": {
+        "value": ">3 days cover"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "99.9%",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.00% from stable inventory management",
+        "narrative": "The Days of Inventory at PMI, GPI, and trade levels remained stable at 99.9%, indicating effective inventory management practices. This stability correlates with consistent distributor fill rates and demand forecasting accuracy. However, the low trend confidence suggests potential volatility in future inventory levels, posing a risk to maintaining optimal stock cover and meeting target days cover."
+      },
+      "description": "Days of Inventory at PMI, GPI (distributor), and trade levels.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 99.73
+        },
+        {
+          "month": "Feb'25",
+          "value": 99.9
+        },
+        {
+          "month": "Mar'25",
+          "value": 99.9
+        },
+        {
+          "month": "Apr'25",
+          "value": 99.9
+        },
+        {
+          "month": "May'25",
+          "value": 99.9
+        },
+        {
+          "month": "Jun'25",
+          "value": 99.9
+        },
+        {
+          "month": "Jul'25",
+          "value": 99.9
+        },
+        {
+          "month": "Aug'25",
+          "value": 99.58
+        },
+        {
+          "month": "Sep'25",
+          "value": 99.9
+        },
+        {
+          "month": "Oct'25",
+          "value": 99.9
+        },
+        {
+          "month": "Nov'25",
+          "value": 99.9
+        }
+      ]
+    },
+    {
+      "id": "innovation-index",
+      "category": "Marketing",
+      "sub_category": "Marketing",
+      "title": "Innovation Index",
+      "subtitle": "Measures new product adoption rate",
+      "actual": {
+        "value": "3.0%",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": ">0.5%"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "6.9%",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "-70% due to reduced NPL launches and increased competition",
+        "narrative": "The significant drop in the Innovation Index is primarily driven by a reduction in the number of new product launches, coupled with heightened competition in the market, which has impacted the volume share of new products. Despite the decrease, the index remains above the target, indicating a strong baseline performance. However, the low trend confidence suggests potential volatility, posing a risk to achieving the forecasted increase next period."
+      },
+      "description": "Volume from new products (NPLs) as % of total volume.",
+      "change": -70.0,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 0.2
+        },
+        {
+          "month": "Feb'25",
+          "value": 0.1
+        },
+        {
+          "month": "Mar'25",
+          "value": 0.13
+        },
+        {
+          "month": "Apr'25",
+          "value": 0.16
+        },
+        {
+          "month": "May'25",
+          "value": 0.3
+        },
+        {
+          "month": "Jun'25",
+          "value": 0.2
+        },
+        {
+          "month": "Jul'25",
+          "value": 0.1
+        },
+        {
+          "month": "Aug'25",
+          "value": 0.1
+        },
+        {
+          "month": "Sep'25",
+          "value": 0.1
+        },
+        {
+          "month": "Oct'25",
+          "value": 0.1
+        },
+        {
+          "month": "Nov'25",
+          "value": 0.03
+        }
+      ]
+    },
+    {
+      "id": "brand-equity",
+      "category": "Marketing",
+      "sub_category": "Marketing",
+      "title": "Brand Equity",
+      "subtitle": "Measures brand impact in key cities",
+      "actual": {
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "60+"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.00% from stagnant consumer engagement",
+        "narrative": "Brand equity has remained unchanged due to stagnant consumer engagement in the focus cities, despite ongoing marketing efforts. This lack of movement correlates with flat brand awareness and trial metrics, indicating that current strategies may not be effectively reaching or resonating with the target audience. If this trend continues, there is a risk of falling short of the target, potentially impacting market share and competitive positioning."
+      },
+      "description": "Brand awareness and trial metrics for PMI brands across 5 focus cities.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": []
+    },
+    {
+      "id": "mi-activity",
+      "category": "Marketing",
+      "sub_category": "Marketing",
+      "title": "MI Activity",
+      "subtitle": "Measures market engagement and reach",
+      "actual": {
+        "value": "266.0 '000",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "300 '000 ECC/month"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "303.3 '000",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "-8.28% from reduced city coverage",
+        "narrative": "The decrease in MI Activity is primarily driven by reduced city coverage, which has limited the reach of Exclusive Consumer Contacts. This reduction correlates with a drop in consumer engagement metrics, indicating potential challenges in market penetration. If city coverage is not expanded, the forecasted increase may not materialize, posing a risk to achieving future targets and impacting overall market intelligence effectiveness."
+      },
+      "description": "Market Intelligence activities — ECC (Exclusive Consumer Contacts in '000) and city coverage.",
+      "change": -8.28,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 312.0
+        },
+        {
+          "month": "Feb'25",
+          "value": 286.0
+        },
+        {
+          "month": "Mar'25",
+          "value": 345.0
+        },
+        {
+          "month": "Apr'25",
+          "value": 340.0
+        },
+        {
+          "month": "May'25",
+          "value": 377.0
+        },
+        {
+          "month": "Jun'25",
+          "value": 339.0
+        },
+        {
+          "month": "Jul'25",
+          "value": 360.0
+        },
+        {
+          "month": "Aug'25",
+          "value": 306.0
+        },
+        {
+          "month": "Sep'25",
+          "value": 358.0
+        },
+        {
+          "month": "Oct'25",
+          "value": 290.0
+        },
+        {
+          "month": "Nov'25",
+          "value": 266.0
+        }
+      ]
+    },
+    {
+      "id": "ipm-dsd",
+      "category": "Sales",
+      "sub_category": "Sales",
+      "title": "IPM DSD",
+      "subtitle": "Measures direct distribution reach",
+      "actual": {
+        "value": "747.0 '000",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "700 '000 outlets"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "763.3 '000",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.92% from expansion of distribution network",
+        "narrative": "The increase in IPM Direct Store Delivery outlets is primarily driven by the strategic expansion of the distribution network, surpassing the target by 47,000 outlets. This growth correlates positively with enhanced market penetration and improved product availability, which could lead to increased sales volume. The high trend confidence suggests sustained growth, reducing the risk of underperformance in the upcoming period."
+      },
+      "description": "Outlets ('000) reached via IPM Direct Store Delivery — distribution width.",
+      "change": 0.92,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 599.498
+        },
+        {
+          "month": "Feb'25",
+          "value": 606.314
+        },
+        {
+          "month": "Mar'25",
+          "value": 631.049
+        },
+        {
+          "month": "Apr'25",
+          "value": 626.926
+        },
+        {
+          "month": "May'25",
+          "value": 666.125
+        },
+        {
+          "month": "Jun'25",
+          "value": 696.273
+        },
+        {
+          "month": "Jul'25",
+          "value": 704.036
+        },
+        {
+          "month": "Aug'25",
+          "value": 719.921
+        },
+        {
+          "month": "Sep'25",
+          "value": 740.825
+        },
+        {
+          "month": "Oct'25",
+          "value": 740.208
+        },
+        {
+          "month": "Nov'25",
+          "value": 747.0
+        }
+      ]
+    },
+    {
+      "id": "ipm-availability",
+      "category": "Sales",
+      "sub_category": "Sales",
+      "title": "IPM Availability",
+      "subtitle": "Measures product distribution depth",
+      "actual": {
+        "value": "1123.0 '000",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "1000 '000 outlets"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "1144.5 '000",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.58% from expanded retail partnerships",
+        "narrative": "The increase in IPM Availability is primarily driven by the expansion of retail partnerships, which has enhanced distribution depth. This growth correlates positively with improved distributor fill rates, ensuring products are consistently available across more outlets. The forward impact is likely to sustain this upward trend, as the forecast indicates continued growth, reducing the risk of stockouts and potentially boosting sales volume."
+      },
+      "description": "Outlets ('000) where PMI products are available — distribution depth.",
+      "change": 0.58,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 941.2235
+        },
+        {
+          "month": "Feb'25",
+          "value": 943.976
+        },
+        {
+          "month": "Mar'25",
+          "value": 979.673
+        },
+        {
+          "month": "Apr'25",
+          "value": 970.987
+        },
+        {
+          "month": "May'25",
+          "value": 1021.796
+        },
+        {
+          "month": "Jun'25",
+          "value": 1052.565
+        },
+        {
+          "month": "Jul'25",
+          "value": 1058.8835
+        },
+        {
+          "month": "Aug'25",
+          "value": 1090.5635
+        },
+        {
+          "month": "Sep'25",
+          "value": 1124.7245
+        },
+        {
+          "month": "Oct'25",
+          "value": 1116.48
+        },
+        {
+          "month": "Nov'25",
+          "value": 1123.0
+        }
+      ]
+    },
+    {
+      "id": "visibility",
+      "category": "Sales",
+      "sub_category": "Sales",
+      "title": "Visibility",
+      "subtitle": "Measures brand presence in outlets",
+      "actual": {
+        "value": "88.2%",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "85%"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "89.9%",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "+1.23% from enhanced marketing campaigns and distributor engagement.",
+        "narrative": "The increase in PMI brand visibility to 88.2% is primarily driven by successful marketing campaigns and improved distributor engagement, which have expanded brand presence across outlets. This positive trend correlates with increased consumer awareness and potentially higher sales volumes. The forecasted visibility of 89.9% suggests sustained momentum, reducing the risk of falling below target and supporting continued market penetration."
+      },
+      "description": "% of outlets with PMI brand visibility (High/Medium/Mass tiers).",
+      "change": 1.23,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 67.217
+        },
+        {
+          "month": "Feb'25",
+          "value": 68.034
+        },
+        {
+          "month": "Mar'25",
+          "value": 69.659
+        },
+        {
+          "month": "Apr'25",
+          "value": 71.328
+        },
+        {
+          "month": "May'25",
+          "value": 76.181
+        },
+        {
+          "month": "Jun'25",
+          "value": 79.39
+        },
+        {
+          "month": "Jul'25",
+          "value": 82.062
+        },
+        {
+          "month": "Aug'25",
+          "value": 83.366
+        },
+        {
+          "month": "Sep'25",
+          "value": 84.985
+        },
+        {
+          "month": "Oct'25",
+          "value": 87.126
+        },
+        {
+          "month": "Nov'25",
+          "value": 88.2
+        }
+      ]
+    },
+    {
+      "id": "ranging",
+      "category": "Sales",
+      "sub_category": "Sales",
+      "title": "Ranging",
+      "subtitle": "Measures product availability success",
+      "actual": {
+        "value": "1013.2 Mio",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "900 Mio"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "993.3 Mio",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "+4.48% from enhanced range availability and sell-through strategies.",
+        "narrative": "The increase in secondary sales volume is primarily driven by improved range availability and effective sell-through strategies, which have exceeded the target by 113.2 Mio sticks. This positive trend correlates with enhanced distributor engagement and optimized inventory management, contributing to higher sales volumes. If sustained, this momentum is likely to continue driving sales above forecast levels, reducing the risk of inventory backlog and supporting revenue growth."
+      },
+      "description": "Secondary sales volume (Mio sticks) — range availability and sell-through.",
+      "change": 4.48,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 858.2383
+        },
+        {
+          "month": "Feb'25",
+          "value": 816.3067
+        },
+        {
+          "month": "Mar'25",
+          "value": 883.8217
+        },
+        {
+          "month": "Apr'25",
+          "value": 856.3406
+        },
+        {
+          "month": "May'25",
+          "value": 876.5108
+        },
+        {
+          "month": "Jun'25",
+          "value": 891.8907
+        },
+        {
+          "month": "Jul'25",
+          "value": 875.8956
+        },
+        {
+          "month": "Aug'25",
+          "value": 918.3604
+        },
+        {
+          "month": "Sep'25",
+          "value": 973.0829
+        },
+        {
+          "month": "Oct'25",
+          "value": 969.7957
+        },
+        {
+          "month": "Nov'25",
+          "value": 1013.2116
+        }
+      ]
+    },
+    {
+      "id": "nielsen-numeric-dist",
+      "category": "Sales",
+      "sub_category": "Nielsen",
+      "title": "Nielsen - Numeric Dist",
+      "subtitle": "Measures product availability in outlets",
+      "actual": {
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "11%+"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.00% due to stagnant distributor engagement",
+        "narrative": "The numeric distribution percentage remains unchanged, indicating stagnant engagement with distributors. This lack of improvement correlates with low trend confidence and suggests potential risks in achieving the target distribution levels. Continued stagnation may impact market penetration and sales growth in the upcoming periods."
+      },
+      "description": "PMI numeric distribution % from Nielsen 11-FC data.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": []
+    },
+    {
+      "id": "nielsen-weighted-dist",
+      "category": "Sales",
+      "sub_category": "Nielsen",
+      "title": "Nielsen - Weighted Dist",
+      "subtitle": "Measures market volume share",
+      "actual": {
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "12%+"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.00% from stagnant market conditions",
+        "narrative": "The weighted distribution has remained unchanged due to stagnant market conditions, which have not favored an increase in volume share. This lack of movement correlates with low trend confidence, suggesting that external factors such as consumer demand or competitive actions are not driving significant changes. The continued below-target performance poses a risk to achieving future distribution targets, potentially impacting overall market penetration and sales growth."
+      },
+      "description": "PMI weighted distribution (volume share %) from Nielsen 11-FC data.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": []
+    },
+    {
+      "id": "industry-monthly-trend",
+      "category": "Industry/Finance",
+      "sub_category": "Industry",
+      "title": "Industry Monthly Trend",
+      "subtitle": "Monitors industry and PMI volume shifts",
+      "actual": {
+        "value": "514.3 Mio",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "Growth vs PY"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "492.4 Mio",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "Indicates strengthening market momentum and a more supportive demand environment.",
+        "narrative": "The observed increase in industry monthly trend is primarily driven by heightened consumer demand, which has led to a 4.69% rise in total industry volume compared to the previous month. This growth, however, remains below the target set for year-over-year improvement, indicating potential challenges in sustaining momentum. The forecast for the next period suggests a slight decline to 492.4 Mio sticks, posing a risk to achieving long-term growth objectives if demand does not stabilize."
+      },
+      "description": "Month-over-month evolution of total industry volume (Mio sticks) and PMI volume.",
+      "change": 4.69,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Jan'22",
+          "value": 259.5854
+        },
+        {
+          "month": "Feb'22",
+          "value": 257.4751
+        },
+        {
+          "month": "Mar'22",
+          "value": 249.0744
+        },
+        {
+          "month": "Apr'22",
+          "value": 273.9902
+        },
+        {
+          "month": "May'22",
+          "value": 277.9393
+        },
+        {
+          "month": "Jun'22",
+          "value": 290.3157
+        },
+        {
+          "month": "Jul'22",
+          "value": 275.3047
+        },
+        {
+          "month": "Aug'22",
+          "value": 298.1713
+        },
+        {
+          "month": "Sep'22",
+          "value": 334.0142
+        },
+        {
+          "month": "Oct'22",
+          "value": 329.6488
+        },
+        {
+          "month": "Nov'22",
+          "value": 337.0624
+        },
+        {
+          "month": "Dec'22",
+          "value": 349.2699
+        },
+        {
+          "month": "Jan'23",
+          "value": 384.8322
+        },
+        {
+          "month": "Feb'23",
+          "value": 393.9694
+        },
+        {
+          "month": "Mar'23",
+          "value": 413.2814
+        },
+        {
+          "month": "Apr'23",
+          "value": 416.7598
+        },
+        {
+          "month": "May'23",
+          "value": 401.3382
+        },
+        {
+          "month": "Jun'23",
+          "value": 397.4648
+        },
+        {
+          "month": "Jul'23",
+          "value": 390.8564
+        },
+        {
+          "month": "Aug'23",
+          "value": 430.2714
+        },
+        {
+          "month": "Sep'23",
+          "value": 475.1829
+        },
+        {
+          "month": "Oct'23",
+          "value": 491.3213
+        },
+        {
+          "month": "Nov'23",
+          "value": 514.3469
+        },
+                {
+          "month": "Dec'25",
+          "value": 400.3469
+        }
+      ]
+    },
+    {
+      "id": "ytd-growth",
+      "category": "Industry/Finance",
+      "sub_category": "Industry",
+      "title": "YTD Growth",
+      "subtitle": "Measures market share and growth",
+      "actual": {
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "Positive YoY"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+0.00% due to stagnant market conditions",
+        "narrative": "The year-to-date growth remains unchanged compared to last month, driven by stagnant market conditions and lack of significant industry expansion. This stability correlates with low trend confidence and indicates a potential risk of not meeting the positive year-over-year target. Continued monitoring of market dynamics and strategic adjustments may be necessary to drive future growth."
+      },
+      "description": "Year-to-date industry growth and PMI share of market (SOM) vs prior year.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": []
+    },
+    {
+      "id": "any-new-trends-or-trend-reversal",
+      "category": "Industry/Finance",
+      "sub_category": "Industry",
+      "title": "Any New Trends or Trend Reversal",
+      "subtitle": "Identifies market shifts early",
+      "actual": {
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "SOM gain"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "Stable performance with no new trends or reversals observed.",
+        "narrative": "The KPI indicates a stable trend with no significant changes from the previous month, suggesting that emerging market trends or reversals have not materialized as expected. This stability correlates with low trend confidence, implying uncertainty in market dynamics. The lack of trend reversal poses a risk to achieving the target of SOM gain, as it suggests potential stagnation in market share growth."
+      },
+      "description": "Emerging market trends or reversals from prior directional patterns.",
+      "change": 0.0,
+      "changeType": "increase",
+      "chartData": []
+    },
+    {
+      "id": "monthly-evolution-mc-000s",
+      "category": "Industry/Finance",
+      "sub_category": "Cost and Margins",
+      "title": "Monthly Evolution MC/000s",
+      "subtitle": "Measures margin contribution dynamics",
+      "actual": {
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "~25 USD/000"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "-2.15% due to increased production costs and lower sales volume",
+        "narrative": "The decrease in Margin Contribution per 000 sticks is primarily driven by increased production costs and a reduction in sales volume, which have negatively impacted the absolute margin dynamics. This decline correlates with a broader trend of rising input costs and market saturation, posing a risk to achieving the target margin. If these conditions persist, the forecast indicates continued pressure on margins, potentially affecting profitability and strategic pricing decisions."
+      },
+      "description": "Margin Contribution per 000 sticks (after SA) — absolute margin dynamics.",
+      "change": -2.15,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 25.516
+        },
+        {
+          "month": "Feb'25",
+          "value": 24.682
+        },
+        {
+          "month": "Mar'25",
+          "value": 22.3676
+        },
+        {
+          "month": "Apr'25",
+          "value": 24.0916
+        },
+        {
+          "month": "May'25",
+          "value": 21.9708
+        },
+        {
+          "month": "Jun'25",
+          "value": 22.7867
+        },
+        {
+          "month": "Jul'25",
+          "value": 22.0837
+        },
+        {
+          "month": "Aug'25",
+          "value": 22.8063
+        },
+        {
+          "month": "Sep'25",
+          "value": 21.4155
+        },
+        {
+          "month": "Oct'25",
+          "value": 20.9724
+        },
+        {
+          "month": "Nov'25",
+          "value": 20.5215
+        }
+      ]
+    },
+    {
+      "id": "comm-cost-ytd-and-yoy",
+      "category": "Industry/Finance",
+      "sub_category": "Cost and Margins",
+      "title": "Comm Cost YTD and YoY",
+      "subtitle": "Measures cost trends over time",
+      "actual": {
+        "value": "$0.0M",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "Within budget"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "$0.0M",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Low"
+      },
+      "causalLinks": {
+        "causalImpact": "+10.34% from increased promotional activities",
+        "narrative": "The increase in commercial costs year-to-date is primarily driven by heightened promotional activities, which have not yet translated into sales growth, as indicated by the unchanged forecast. This correlation suggests a potential risk of overspending without achieving the desired revenue impact, necessitating a review of promotional strategies to align costs with sales targets."
+      },
+      "description": "Year-to-date commercial cost (Sales Allowance + DME) in USD '000 vs prior year.",
+      "change": 10.34,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Feb'25",
+          "value": 34.7614
+        },
+        {
+          "month": "Mar'25",
+          "value": 32.1182
+        },
+        {
+          "month": "Apr'25",
+          "value": 29.794
+        },
+        {
+          "month": "May'25",
+          "value": 32.7449
+        },
+        {
+          "month": "Jun'25",
+          "value": 31.2556
+        },
+        {
+          "month": "Jul'25",
+          "value": 31.494
+        },
+        {
+          "month": "Aug'25",
+          "value": 31.8757
+        },
+        {
+          "month": "Sep'25",
+          "value": 32.3096
+        },
+        {
+          "month": "Oct'25",
+          "value": 32.728
+        },
+        {
+          "month": "Nov'25",
+          "value": 32.9326
+        }
+      ]
+    },
+    {
+      "id": "comm-cost-as-of-nor-quarter-trend",
+      "category": "Industry/Finance",
+      "sub_category": "Cost and Margins",
+      "title": "Comm Cost as % of NOR - Quarter Trend",
+      "subtitle": "Measures quarterly cost efficiency",
+      "actual": {
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "Improving QoQ"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "-0.71% from reduced operational expenses",
+        "narrative": "The decrease in commercial cost as a percentage of NOR is primarily driven by reduced operational expenses, which have been effectively managed this quarter. This reduction correlates with improved cost efficiency measures across the organization, contributing to the KPI being below target. Moving forward, maintaining these operational efficiencies will be crucial to sustaining the trend and achieving the forecasted performance."
+      },
+      "description": "Commercial cost as % of NOR by quarter — operational cost efficiency.",
+      "change": -0.71,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 37.853
+        },
+        {
+          "month": "Feb'25",
+          "value": 36.3176
+        },
+        {
+          "month": "Mar'25",
+          "value": 35.0058
+        },
+        {
+          "month": "Apr'25",
+          "value": 35.9808
+        },
+        {
+          "month": "May'25",
+          "value": 35.1282
+        },
+        {
+          "month": "Jun'25",
+          "value": 34.9902
+        },
+        {
+          "month": "Jul'25",
+          "value": 35.377
+        },
+        {
+          "month": "Aug'25",
+          "value": 35.2498
+        },
+        {
+          "month": "Sep'25",
+          "value": 33.7328
+        },
+        {
+          "month": "Oct'25",
+          "value": 33.2666
+        },
+        {
+          "month": "Nov'25",
+          "value": 33.0307
+        }
+      ]
+    },
+    {
+      "id": "g-a-as-of-nor",
+      "category": "Industry/Finance",
+      "sub_category": "Cost and Margins",
+      "title": "G&A as % of NOR",
+      "subtitle": "Measures overhead cost efficiency",
+      "actual": {
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "Improving YoY"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "-2.15% from cost optimization initiatives",
+        "narrative": "The decrease in General & Administrative expenses as a percentage of Net Operating Revenue is primarily driven by successful cost optimization initiatives, which have reduced overhead expenses. This reduction correlates with improved operational efficiency and aligns with the strategic goal of enhancing profitability. The sustained decrease below target suggests a positive forward impact on financial performance, reducing risk associated with overhead costs."
+      },
+      "description": "General & Administrative expenses as % of Net Operating Revenue — overhead leverage.",
+      "change": -2.15,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 25.516
+        },
+        {
+          "month": "Feb'25",
+          "value": 24.682
+        },
+        {
+          "month": "Mar'25",
+          "value": 22.3676
+        },
+        {
+          "month": "Apr'25",
+          "value": 24.0916
+        },
+        {
+          "month": "May'25",
+          "value": 21.9708
+        },
+        {
+          "month": "Jun'25",
+          "value": 22.7867
+        },
+        {
+          "month": "Jul'25",
+          "value": 22.0837
+        },
+        {
+          "month": "Aug'25",
+          "value": 22.8063
+        },
+        {
+          "month": "Sep'25",
+          "value": 21.4155
+        },
+        {
+          "month": "Oct'25",
+          "value": 20.9724
+        },
+        {
+          "month": "Nov'25",
+          "value": 20.5215
+        }
+      ]
+    },
+    {
+      "id": "key-drivers-for-change-in-comm-cost-g-a",
+      "category": "Industry/Finance",
+      "sub_category": "Cost and Margins",
+      "title": "Key Drivers for Change in Comm Cost & G&A",
+      "subtitle": "Identifies cost change catalysts",
+      "actual": {
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "Cost reduction"
+      },
+      "forecast": {
+        "label": "Forecast (Next)",
+        "value": "$0.0M",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "causalLinks": {
+        "causalImpact": "-2.15% from streamlined operational processes",
+        "narrative": "The observed decrease in commercial cost and G&A is primarily driven by streamlined operational processes that have reduced overhead expenses. This reduction correlates with improved efficiency metrics across departments, indicating a successful implementation of cost-saving measures. Going forward, maintaining these streamlined processes will likely sustain the cost reduction, mitigating financial risks and supporting budget targets."
+      },
+      "description": "Root-cause narrative on factors driving changes in commercial cost and G&A.",
+      "change": -2.15,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Jan'25",
+          "value": 25.516
+        },
+        {
+          "month": "Feb'25",
+          "value": 24.682
+        },
+        {
+          "month": "Mar'25",
+          "value": 22.3676
+        },
+        {
+          "month": "Apr'25",
+          "value": 24.0916
+        },
+        {
+          "month": "May'25",
+          "value": 21.9708
+        },
+        {
+          "month": "Jun'25",
+          "value": 22.7867
+        },
+        {
+          "month": "Jul'25",
+          "value": 22.0837
+        },
+        {
+          "month": "Aug'25",
+          "value": 22.8063
+        },
+        {
+          "month": "Sep'25",
+          "value": 21.4155
+        },
+        {
+          "month": "Oct'25",
+          "value": 20.9724
+        },
+        {
+          "month": "Nov'25",
+          "value": 20.5215
+        }
+      ]
+    },
+    {
+      "id": "cc-sos",
+      "category": "Percentage",
+      "sub_category": "CC Share of Shelf",
+      "title": "Market Share",
+      "subtitle": "Share of Shelf Performance",
+      "actual": {
+        "value": "2.9%",
+        "trend": "increase"
+      },
+      "target": {
+        "value": "+3.2 pts vs LY"
+      },
+      "forecast": {
+        "label": "Next",
+        "value": "44.1%",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "Medium"
+      },
+      "advanceIndicator": {
+        "label": "Advance Indicator",
+        "value": "+1.4 pts vs Avg of last 3 months",
+        "trend": "increase",
+        "text": "Uptrend driven by improved shelf execution and increased CC-facing SKUs."
+      },
+      "achievementVsRF": {
+        "label": "Achievement vs. RF",
+        "value": "94.3%",
+        "status": "on-track",
+        "text": "Minor RF variance driven by fluctuating execution in lower-tier stores."
+      },
+      "segmentMix": {
+        "Core": {
+          "value": 28.3,
+          "status": "on track"
+        },
+        "Premium": {
+          "value": 10.4,
+          "status": "on track"
+        },
+        "Value": {
+          "value": 3.1,
+          "status": "at risk"
+        },
+        "LowTier": {
+          "value": 1.0,
+          "status": "off track"
+        },
+        "insight": "Core contributes majority of shelf presence; growth led by Premium segment execution."
+      },
+      "causalLinks": {
+        "causalImpact": "Flat market share due to rising excise duties/taxes and high price consciousness among consumers",
+        "narrative": "SOS uplift primarily reflects better planogram adherence, improved promoter coverage, and reduced OOS incidents."
+      },
+      "causalLinksExtended": [
+        "SOS growth supported by stronger CC visibility and reduced execution gaps.",
+        "RF gap narrowing as store compliance improves.",
+        "Premium visibility continues to strengthen category standing."
+      ],
+      "description": "Share of Shelf for CC channels, measuring brand visibility strength versus competitors.",
+      "change": 3.2,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Oct'25",
+          "value": 10.584
+        },
+        {
+          "month": "Nov'25",
+          "value": 10.6
+        },
+        {
+          "month": "Dec'25",
+          "value": 10.9
+        }
+      ]
+    },
+    {
+      "id": "operating-income",
+      "category": "Million dollars",
+      "sub_category": "Operating Profitability",
+      "title": "Operating Income",
+      "subtitle": "Growth vs. Prior Year",
+      "statusTag": "low",
+      "actual": {
+        "value": "171.0",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "177.7"
+      },
+      "forecast": {
+        "label": "Next",
+        "value": "N/A",
+        "trend": "decrease"
+      },
+      "confidence": {
+        "level": "Medium"
+      },
+      "advanceIndicator": {
+        "label": "Advance Indicator",
+        "value": "-6.8% vs. Avg of last 3 months",
+        "trend": "decrease",
+        "text": "Loss deepening driven by rising operating costs and softening margin performance."
+      },
+      "achievementVsRF": {
+        "label": "Achievement vs. RF",
+        "value": "81.2%",
+        "status": "off-track",
+        "text": "Significant RF miss due to higher cost pressure and lower-than-expected operating leverage."
+      },
+      "segmentMix": {
+        "Core": {
+          "value": -140.3,
+          "status": "at risk"
+        },
+        "Premium": {
+          "value": -42.7,
+          "status": "at risk"
+        },
+        "NewGen": {
+          "value": -25.6,
+          "status": "off track"
+        },
+        "Legacy": {
+          "value": -7.1,
+          "status": "off track"
+        },
+        "insight": "Losses are broad-based, with Legacy and NewGen segments creating the deepest drag on profitability."
+      },
+      "causalLinks": {
+        "causalImpact": "Declining OI driven by higher operating expenses and deteriorating cost efficiency.",
+        "narrative": "Operating income deterioration reflects inflationary pressure, increased logistics cost, and unfavorable overhead absorption."
+      },
+      "causalLinksExtended": [
+        "Margin compression continues as costs outpace revenue growth.",
+        "RF underachievement highlights execution challenges in cost control.",
+        "Legacy portfolio underperformance amplifies overall profitability drag."
+      ],
+      "description": "Operating income in million dollars, tracked to evaluate profitability erosion and operational cost pressure.",
+      "change": -10.4,
+      "changeType": "decrease",
+      "chartData": [
+        {
+          "month": "Oct'25",
+          "value": 15.3
+        },
+        {
+          "month": "Nov'25",
+          "value": 16.1
+        },
+        {
+          "month": "Dec'25",
+          "value": 15.8
+        }
+      ]
+    },
+    {
+      "id": "net-revenue-growth",
+      "category": "Million dollars",
+      "sub_category": "Net Revenue Performance",
+      "title": "Net Revenue",
+      "subtitle": "Growth vs. Prior Year",
+      "actual": {
+        "value": "358.4",
+        "trend": "decrease"
+      },
+      "target": {
+        "value": "386.1"
+      },
+      "forecast": {
+        "label": "Next",
+        "value": "N/A",
+        "trend": "increase"
+      },
+      "confidence": {
+        "level": "High"
+      },
+      "advanceIndicator": {
+        "label": "Advance Indicator",
+        "value": "+6.3% vs. Avg of last 3 months",
+        "trend": "increase",
+        "text": "Momentum supported by sustained pricing and strong sell‑in execution."
+      },
+      "achievementVsRF": {
+        "label": "Achievement vs. RF",
+        "value": "96.2%",
+        "status": "on-track",
+        "text": "Minor RF gap driven by softer seasonality but overall delivery remains strong."
+      },
+      "segmentMix": {
+        "Core": {
+          "value": 620.4,
+          "status": "on track"
+        },
+        "Premium": {
+          "value": 188.7,
+          "status": "on track"
+        },
+        "Value": {
+          "value": 32.1,
+          "status": "at risk"
+        },
+        "LowTier": {
+          "value": 4.0,
+          "status": "off track"
+        },
+        "insight": "Premium continues to strengthen mix contribution, offsetting softness in lower-tier SKUs."
+      },
+      "causalLinks": {
+        "causalImpact": "Boosted by pricing actions, improved channel execution, and stronger mix performance.",
+        "narrative": "Revenue strength reflects a combination of mix uplift, disciplined discounting, and stable demand across core regions."
+      },
+      "causalLinksExtended": [
+        "Strong premium mix continues to elevate net revenue.",
+        "Minor RF gap suggests opportunity to reinforce volume execution.",
+        "Pricing optimization remains a strong contributor to revenue resilience."
+      ],
+      "description": "Net revenue in million dollars, compared year-over-year to track monetization and portfolio strength.",
+      "change": 18.8,
+      "changeType": "increase",
+      "chartData": [
+        {
+          "month": "Oct'25",
+          "value": 32.7
+        },
+        {
+          "month": "Nov'25",
+          "value": 32.9
+        },
+        {
+          "month": "Dec'25",
+          "value": 36.3
+        }
+      ]
+    }
+  ]
+}
