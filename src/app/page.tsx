@@ -7,6 +7,7 @@ import styles from "../../src/components/dashboard/dashboard.module.css";
 import { askExcelAgent, AgentMessage, AgentEvent } from '@/services/excel-agent-service';
 import { RotatingText } from '@/components/excel-agent/rotating-text';
 import { StepLine } from '@/components/excel-agent/step-line';
+import { UnderDevelopmentBadge } from '@/components/shared/under-development-badge';
 
 export default function DashboardPage() {
   const [messages, setMessages] = useState<AgentMessage[]>([]);
@@ -168,6 +169,7 @@ export default function DashboardPage() {
 
   return (
     <div className={styles.container}>
+      <UnderDevelopmentBadge />
       {/* Greeting - Always at top */}
       <div className={styles.greeting}>
         <h1>

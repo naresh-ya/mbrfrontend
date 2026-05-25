@@ -8,6 +8,7 @@ import type { KpiData } from "@/app/lib/data"
 import { transformDrivingIndicatorsFromS3, transformNielsenIndicatorsFromS3 } from "@/app/lib/transform-driving-indicators"
 import { useKPIMonths } from "@/hooks/useKPIMonths"
 import { useUIMonth } from "@/contexts/UIMonthContext"
+import { UnderDevelopmentBadge } from "@/components/shared/under-development-badge"
 
 async function fetchDrivingIndicators(month: string) {
   try {
@@ -77,6 +78,7 @@ export default function DrivingIndicatorsPage() {
 
   return (
     <>
+      <UnderDevelopmentBadge />
       <div className="flex-1 p-4 sm:p-6 lg:p-8 bg-white">
         <DashboardHeader
           kpiData={kpiData}

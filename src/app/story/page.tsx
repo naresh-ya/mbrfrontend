@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import StoryOfMonthPMI from "@/components/exenarrative/execstory";
 import { useUIMonth } from "@/contexts/UIMonthContext";
+import { UnderDevelopmentBadge } from "@/components/shared/under-development-badge";
 
 export default function StoryPage() {
   const [storyData, setStoryData] = useState<any>(null);
@@ -153,6 +154,7 @@ export default function StoryPage() {
 
   return (
     <div>
+      <UnderDevelopmentBadge />
       <StoryOfMonthPMI data={storyData} />
     </div>
   );

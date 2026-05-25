@@ -7,10 +7,12 @@
  */
 
 import { ExcelAgentChat } from '@/components/excel-agent/excel-agent-chat';
+import { UnderDevelopmentBadge } from '@/components/shared/under-development-badge';
 
 export default function AgentPage() {
   return (
     <div className="container mx-auto px-4 py-8">
+      <UnderDevelopmentBadge />
       <div className="max-w-4xl mx-auto">
         <ExcelAgentChat />
       </div>
