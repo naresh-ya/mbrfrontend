@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Global Light Theme Only */
+@layer base {
+  :root {
+    /* ✅ Global white UI */
+    --background: 0 0% 100%;      /* white */
+    --foreground: 0 0% 10%;       /* black text */
+
+    /* ✅ Cards should be white */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* ✅ Primary branding blue (from screenshot) */
+    --primary: 210 90% 45%;              /* PMI Blue Sidebar */
+    --primary-foreground: 0 0% 100%;     /* white */
+
+    /* ✅ Light secondaries */
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 35%;
+
+    --accent: 210 80% 60%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* ✅ Light gray borders */
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 210 80% 60%;
+
+    /* Chart colors (unchanged) */
+    --chart-1: 142 76% 36%;
+    --chart-2: 190 90% 55%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --radius: 0.5rem;
+
+    /* ✅ Sidebar styling from screenshot */
+    --sidebar-background: 210 90% 45%;      /* PMI blue */
+    --sidebar-foreground: 0 0% 100%;        /* white text/icons */
+    --sidebar-primary: 210 90% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 80% 52%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 90% 35%;
+    --sidebar-ring: 210 90% 45%;
+  }
+}
+
+/* ✅ Apply Global White Background + Black Text */
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+/* ✅ Utility classes preserved */
+.w-60 {
+  width: 12rem;
+}
+
+.h-40 {
+  height: 8rem;
+}
+
+/* ✅ Remove harmful global left margins */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin-left: 0;
+}
+
+.bg-card\/80 {
+    background-color: #fff;
+}

@@ -1,0 +1,233 @@
+
+"use client"
+
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import { DashboardHeader } from "@/components/dashboard/dashboard-header"
+import { KpiCard } from "@/components/dashboard/kpi-card"
+import { KitSalesDialog } from "@/components/dashboard/kit-sales-dialog"
+import { Skeleton } from "@/components/ui/skeleton"
+import { formatChartMonth, sortMonthLabelsDescending } from "@/lib/month"
+import type { DashboardResponse, KpiData } from "@/app/lib/data"
+import { useUIMonth } from "@/contexts/UIMonthContext"
+
+// type KpiDetails = {
+//   title: string
+//   description: string
+//   actual: string
+//   target: string
+//   forecast: string
+//   confidence: string
+//   actualTrend?: "up" | "down"
+//   forecastTrend?: "up" | "down"
+//   causalImpact: string
+// }
+
+// type KpiData = {
+//   id: string
+//   title: string
+//   value: string
+//   change: string
+//   trend: "up" | "down"
+//   subtitle: string
+//   details: KpiDetails
+// }
+
+// type DashboardResponse = {
+//   userName: string
+//   kpis: KpiData[]
+// }
+
+async function fetchKpiData(): Promise<DashboardResponse> {
+  const res = await fetch("/api/kpi")
+  if (!res.ok) {
+    throw new Error("Failed to fetch KPI data")
+  }
+  return res.json()
+}
+
+export default function KpiPage() {
+  const router = useRouter()
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
+  const [kpiData, setKpiData] = useState<KpiData[]>([])
+  const [selectedKpi, setSelectedKpi] = useState<KpiData | null>(null)
+  const [selectedMonth, setSelectedMonth] = useState("")
+  const [monthOptions, setMonthOptions] = useState<string[]>([])
+  const [userName, setUserName] = useState("")
+  const [loading, setLoading] = useState(true)
+
+  // Use global UI month context
+  const {
+    currentMonth,
+    currentMonthAbbr,
+    availableMonthsAbbr,
+    changeMonth,
+    config: uiMonthConfig,
+  } = useUIMonth()
+
+  // Derive lastUpdated from global config
+  const lastUpdated = uiMonthConfig?.generatedAt || uiMonthConfig?.lastUpdated || new Date().toISOString()
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        setLoading(true)
+        const data = await fetchKpiData()
+        setKpiData(data.kpis)
+        setUserName(data.userName)
+
+        // Extract months from KPI chart data
+        const monthSet = new Set<string>()
+        data.kpis.forEach((kpi) => {
+          kpi.chartData.forEach((point) => {
+            const label = formatChartMonth(point.month)
+            if (label) monthSet.add(label)
+          })
+        })
+
+        const sortedOptions = sortMonthLabelsDescending(Array.from(monthSet)).slice(0, 3)
+        setMonthOptions(sortedOptions)
+
+        // Use global UI month if available and in options
+        // Compare using abbreviated format since sortedOptions uses "Dec 2025" format
+        if (currentMonthAbbr && sortedOptions.includes(currentMonthAbbr)) {
+          console.log(`✓ Setting selected month to: ${currentMonthAbbr}`)
+          setSelectedMonth(currentMonthAbbr)
+        } else if (sortedOptions.length > 0) {
+          console.log(`⚠ Current month ${currentMonthAbbr} not in options, defaulting to: ${sortedOptions[0]}`)
+          setSelectedMonth(sortedOptions[0])
+        }
+      } catch (error) {
+        console.error("Error loading KPI data:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadData()
+  }, [currentMonth])
+
+  // Sync selectedMonth with global currentMonth whenever it changes
+  // Use abbreviated format to match the dropdown options format
+  useEffect(() => {
+    if (currentMonthAbbr && currentMonthAbbr !== selectedMonth) {
+      console.log(`🔄 Syncing dropdown: ${selectedMonth} → ${currentMonthAbbr}`)
+      setSelectedMonth(currentMonthAbbr)
+    }
+  }, [currentMonthAbbr, selectedMonth])
+
+  const handleKpiClick = async (kpi: KpiData) => {
+    // Navigate to iSynesis page, preserving the current month selection
+    // The global UIMonth context will ensure the correct month is shown
+    router.push('/story')
+  }
+
+  // Handler for month change using global context
+  const handleMonthChange = async (month: string) => {
+    setSelectedMonth(month)
+
+    try {
+      // Update via global context (this updates backend and may trigger insights generation)
+      await changeMonth(month)
+      console.log(`✓ Period updated to ${month}`)
+
+      // Force re-render by updating local state with the new month
+      setSelectedMonth(month)
+    } catch (error) {
+      console.error('Error updating period:', error)
+      // Revert to previous month on error
+      setSelectedMonth(currentMonth || month)
+    }
+  }
+
+
+  return (
+  <>
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 bg-white">
+      <DashboardHeader
+        kpiData={kpiData}
+        userName={userName}
+        selectedMonth={selectedMonth}
+        monthOptions={monthOptions}
+        onMonthChange={handleMonthChange}
+        lastUpdated={lastUpdated}
+      />
+
+      <main className="mt-8">
+        {loading ? (
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-6">
+            {[...Array(8)].map((_, i) => (
+              <Skeleton key={i} className="h-[230px] w-full" />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-6">
+            {kpiData
+              .filter((k) => k.id !== "bias" && k.id !== "industry-monthly-trend")
+              .map((kpi) => {
+                const filteredChartData = kpi.chartData.filter(
+                  (point) => formatChartMonth(point.month) === selectedMonth
+                );
+
+                return { kpi, filteredChartData };
+              })
+              .filter(({ filteredChartData }) => filteredChartData.length > 0)
+              .map(({ kpi, filteredChartData }) => {
+                const selectedPoint = filteredChartData[0];
+                const displayValue = selectedPoint
+                  ? selectedPoint.value.toLocaleString("en-US")
+                  : kpi.actual.value;
+
+                // derive a statusTag from available fields for backward compatibility
+                const statusTag = (
+                  kpi.statusTag || kpi.confidence?.level || kpi.achievementVsRF?.status || ""
+                ).toString().trim().toLowerCase();
+
+                return (
+                  <div
+                    key={kpi.title}
+                    onClick={() => handleKpiClick(kpi)}
+                    // className="cursor-pointer bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow p-2"
+                  >
+
+{/* <KpiCard
+  title={kpi.title}
+  value={displayValue}
+  change={kpi.change}
+  changeType={kpi.changeType}
+  chartData={filteredChartData}   
+/> */}
+
+
+<KpiCard
+  category={kpi.category}
+  changeType={kpi.changeType}
+  title={kpi.title}
+  subtitle={kpi.subtitle}
+  value={displayValue}
+  comparison={kpi.comparison}
+  narrative={kpi.narrative}
+  statusTag={statusTag}
+  trend={kpi.actual.trend}
+  casualImpact={kpi.causalLinks.causalImpact}
+
+
+  chartData={kpi.chartData}    
+/>
+
+                  </div>
+                );
+              })}
+          </div>
+        )}
+      </main>
+    </div>
+
+    <KitSalesDialog
+      open={isDetailModalOpen}
+      onOpenChange={setIsDetailModalOpen}
+      data={selectedKpi || null}
+    />
+  </>
+);
+}
