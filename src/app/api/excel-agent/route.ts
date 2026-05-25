@@ -9,7 +9,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { defaultProvider } from '@aws-sdk/credential-providers';
+import { defaultProvider } from '@aws-sdk/credential-provider-node';
 import * as aws4 from 'aws4';
 import { EXCEL_AGENT_CONFIG } from '@/lib/agentcore-config';
 
@@ -56,7 +56,8 @@ function generateSessionId(): string {
  */
 async function signAgentCoreRequest(payload: string, sessionId: string) {
   // Get AWS credentials using default provider chain
-  const credentials = await defaultProvider()();
+  const provider = defaultProvider();
+  const credentials = await provider();
 
   const url = new URL(EXCEL_AGENT_CONFIG.endpoint);
 
