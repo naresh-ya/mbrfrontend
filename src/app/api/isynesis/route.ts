@@ -11,14 +11,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { invokeAgentCore } from '@/lib/agentcore-invoker';
 
 const USE_AGENTCORE = process.env.USE_AGENTCORE === 'true';
-const PYTHON_API_URL = process.env.PYTHON_API_URL || 'http://localhost:8000';
-const LAMBDA_INSIGHTS_URL = process.env.LAMBDA_INSIGHTS_URL || process.env.PYTHON_API_URL || 'http://localhost:8000';
+const LAMBDA_INSIGHTS_URL = process.env.LAMBDA_INSIGHTS_URL || 'https://xoc6chwxbi.execute-api.eu-west-1.amazonaws.com/prod';
 
-// Use Lambda for insights generation (set via environment variable)
-const USE_LAMBDA_INSIGHTS = process.env.USE_LAMBDA_INSIGHTS === 'true';
-
-// Choose the right API URL based on configuration
-const INSIGHTS_API_URL = USE_LAMBDA_INSIGHTS ? LAMBDA_INSIGHTS_URL : PYTHON_API_URL;
+// Always use Lambda for insights generation (no Python backend)
+const INSIGHTS_API_URL = LAMBDA_INSIGHTS_URL;
 
 /**
  * GET /api/isynesis
@@ -53,33 +49,9 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(result.data);
     }
 
-    // Fallback to HTTP backend
-    // Step 1: Set the month in backend config if month/year provided
-    if (month && year) {
-      console.log(`[iSynesis API] Setting backend month to: ${month} ${year}`);
-      try {
-        const setMonthResponse = await fetch(`${PYTHON_API_URL}/api/isynesis/set-month`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ month, year }),
-          signal: AbortSignal.timeout(10000), // 10 seconds
-        });
-
-        if (!setMonthResponse.ok) {
-          console.error(`[iSynesis API] Failed to set month: ${setMonthResponse.status}`);
-        } else {
-          console.log(`[iSynesis API] Successfully set month to ${month} ${year}`);
-        }
-      } catch (setMonthError) {
-        console.error('[iSynesis API] Error setting month:', setMonthError);
-        // Continue anyway - story endpoint might still work
-      }
-    }
-
-    // Step 2: Fetch story data
-    console.log(`[iSynesis API] Fetching story data from ${USE_LAMBDA_INSIGHTS ? 'Lambda' : 'Python backend'}...`);
+    // Fallback to Lambda backend (no Python backend needed)
+    // Fetch story data directly from Lambda
+    console.log(`[iSynesis API] Fetching story data from Lambda...`);
     console.log(`[iSynesis API] Month: ${month}, Year: ${year}`);
 
     // Build URL with query parameters if month/year provided
@@ -159,8 +131,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(result.data);
     }
 
-    // Fallback to HTTP backend
-    const url = new URL(`${PYTHON_API_URL}/api/isynesis/refresh`);
+    // Fallback to Lambda backend
+    const url = new URL(`${LAMBDA_INSIGHTS_URL}/api/isynesis/refresh`);
     if (year) url.searchParams.append('year', year);
     if (month) url.searchParams.append('month', month);
 
