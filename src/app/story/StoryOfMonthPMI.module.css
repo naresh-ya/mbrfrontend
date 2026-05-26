@@ -1,0 +1,527 @@
+/*************************************************************
+ * Layout Shell
+ *************************************************************/
+.story {
+  width: 100%;
+  background: #f7f7f8;
+  color: #111;
+  font-family: system-ui, sans-serif;
+  padding: 24px 0 120px;
+}
+
+.shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/*************************************************************
+ * Topbar / Branding
+ *************************************************************/
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  font-size: 22px;
+  font-weight: 700;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.kicker {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef3ff;
+  color: #2643a3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.tagDot {
+  width: 8px;
+  height: 8px;
+  background: #2643a3;
+  border-radius: 50%;
+}
+
+/*************************************************************
+ * Hero Layout
+ *************************************************************/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  gap: 32px;
+}
+
+.heroLeft {
+  flex: 1.2;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.lead {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/*************************************************************
+ * Risk Chips
+ *************************************************************/
+.riskChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.riskChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #ddd;
+  transition: all 0.2s ease;
+}
+
+.riskChipHigh {
+  background: #ffeaea;
+  color: #b30000;
+  box-shadow: 0 0 0 1px #ffb3b3;
+}
+
+.riskChipMedium {
+  background: #fff8e6;
+  color: #a36b00;
+  box-shadow: 0 0 0 1px #ffdf99;
+}
+
+.riskChip:hover {
+  transform: translateY(-2px);
+}
+
+.riskChipDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.riskChipArrow {
+  opacity: 0.6;
+}
+
+/*************************************************************
+ * Signal Card
+ *************************************************************/
+.heroRight {
+  flex: 1;
+}
+
+.signalCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.signalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signalTitle {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+
+.warnBadge {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.signalRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0;
+}
+
+.signalMetric {}
+
+.metricLabel {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.metricValue {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.emph {
+  font-size: 18px;
+  color: #b30000;
+}
+
+.signalDivider {
+  height: 1px;
+  background: #eee;
+  margin: 10px 0;
+}
+
+.signalViz {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.signalNote {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+/*************************************************************
+ * Inventory Blocks
+ *************************************************************/
+.blocks {
+  display: flex;
+  gap: 3px;
+  height: 28px;
+}
+
+.block {
+  width: 6px;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+/*************************************************************
+ * KPI Strip
+ *************************************************************/
+.kpis {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.kpi {
+  flex: 1;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.kpiIcon svg {
+  opacity: 0.7;
+}
+
+.kpiBody {}
+
+.kpiLabel {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.kpiValue {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.kpiDelta {
+  margin-left: 6px;
+  font-size: 13px;
+  color: #008000;
+}
+
+.kpiHint {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* KPI tone variants */
+.good { border-left: 4px solid #0a8f08; }
+.warn { border-left: 4px solid #ff9800; }
+.risk { border-left: 4px solid #d32f2f; }
+.neutral { border-left: 4px solid #ccc; }
+
+/*************************************************************
+ * Story Panels (Acts)
+ *************************************************************/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 24px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.panelTitle {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.ribbon {
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.goodRibbon { background: #e9f7ec; color: #0c6c07; }
+.warnRibbon { background: #fff5da; color: #a36b00; }
+.riskRibbon { background: #ffe7e7; color: #b30000; }
+
+.bullets {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.callout {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.calloutWarn {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.calloutTitle {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.microViz {
+  margin-top: 16px;
+}
+
+.microTitle {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+/*************************************************************
+ * Mini Bar Chart
+ *************************************************************/
+.miniChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 50px;
+}
+
+.miniBar {
+  width: 6px;
+  background: #4a6cf7;
+  border-radius: 2px;
+}
+
+/*************************************************************
+ * State Card
+ *************************************************************/
+.stateCard {
+  margin-top: 14px;
+  background: #f8f9fc;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.stateTitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stateStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.stateK { opacity: 0.6; }
+.stateV { font-weight: 600; }
+.stateWarn { color: #b30000; }
+
+/*************************************************************
+ * Drawer Overlay
+ *************************************************************/
+.drawerRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+
+.drawerOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  animation: fadeIn 0.2s ease forwards;
+}
+
+/*************************************************************
+ * Drawer Panel
+ *************************************************************/
+.drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 420px;
+  height: 100%;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  padding: 24px;
+  overflow-y: auto;
+  animation: slideIn 0.25s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } 
+  to { opacity: 1; }
+}
+
+.drawerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawerTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.drawerPill {
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.pillHigh { background: #ffe7e7; color: #b30000; }
+.pillMedium { background: #fff5da; color: #a36b00; }
+
+.drawerClose {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.drawerSection {
+  margin-top: 24px;
+}
+
+.drawerCallout {
+  background: #f7f0ff;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.drawerLabel {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.drawerText {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.drawerList {
+  padding-left: 22px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.drawerBottom {
+  margin-top: 40px;
+}
+
+.drawerCta {
+  width: 100%;
+  padding: 12px;
+  background: #2643a3;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}

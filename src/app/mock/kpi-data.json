@@ -1,0 +1,82 @@
+ {
+    "userName": "Kavya Ravikanti",
+    "kpis": [ {
+    "id": "total-revenue",
+    "title": "Total Revenue",
+    "value": "$1.2M",
+    "change": 12.5,
+    "changeType": "increase",
+    "description": "Tracks monthly revenue performance",
+    "chartData": [
+      { "month": "Jan", "value": 800000 },
+      { "month": "Feb", "value": 850000 },
+      { "month": "Mar", "value": 900000 },
+      { "month": "Apr", "value": 950000 },
+      { "month": "May", "value": 1000000 }
+    ],
+    "details": {
+      "title": "Total Revenue",
+      "subtitle": "Monthly Performance",
+      "actual": "$1.2M",
+      "target": "$1.0M",
+      "forecast": "$1.3M",
+      "confidence": "85%",
+      "actualTrend": "increase",
+      "forecastTrend": "increase",
+      "causalImpact": "+$200K"
+    }
+  },
+  {
+    "id": "profit-margin",
+    "title": "Profit Margin",
+    "value": "25%",
+    "change": 2.3,
+    "changeType": "increase",
+    "description": "Tracks monthly profit margin performance",
+    "chartData": [
+      { "month": "Jan", "value": 20 },
+      { "month": "Feb", "value": 22 },
+      { "month": "Mar", "value": 24 },
+      { "month": "Apr", "value": 26 },
+      { "month": "May", "value": 28 }
+    ],
+    "details": {
+      "title": "Profit Margin",
+      "subtitle": "Monthly Performance",
+      "actual": "25%",
+      "target": "20%",
+      "forecast": "30%",
+      "confidence": "90%",
+      "actualTrend": "increase",
+      "forecastTrend": "increase",
+      "causalImpact": "+5%"
+    }
+  },
+  {
+    "id": "customer-satisfaction",
+    "title": "Customer Satisfaction",
+    "value": "85%",
+    "change": 1.5,
+    "changeType": "increase",
+    "description": "Tracks monthly customer satisfaction performance", 
+    "chartData": [
+      { "month": "Jan", "value": 80 },
+      { "month": "Feb", "value": 82 },
+      { "month": "Mar", "value": 84 },
+      { "month": "Apr", "value": 86 },
+      { "month": "May", "value": 88 }
+    ],
+    "details": {
+      "title": "Customer Satisfaction",
+      "subtitle": "Monthly Performance",
+      "actual": "85%",
+      "target": "80%",
+      "forecast": "90%",
+      "confidence": "88%",
+      "actualTrend": "increase",
+      "forecastTrend": "increase",
+      "causalImpact": "+5%"
+    }
+  }
+]
+}
