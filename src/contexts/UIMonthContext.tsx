@@ -51,6 +51,9 @@ export function UIMonthProvider({ children }: UIMonthProviderProps) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // HYDRATION FIX: Track if component has mounted on client
+  const [isHydrated, setIsHydrated] = useState(false);
+
   // PERSISTENCE: Load saved selection from localStorage
   const loadSavedSelection = useCallback(() => {
     if (typeof window === 'undefined') return null;
@@ -147,8 +150,16 @@ export function UIMonthProvider({ children }: UIMonthProviderProps) {
     }
   }, [saveSelection]);
 
-  // Initial load: restore from localStorage if available
+  // HYDRATION FIX: Set hydrated flag after mount
   useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  // Initial load: restore from localStorage if available
+  // Only run after hydration to avoid SSR mismatch
+  useEffect(() => {
+    if (!isHydrated) return;
+
     const savedSelection = loadSavedSelection();
 
     if (savedSelection) {
@@ -158,7 +169,7 @@ export function UIMonthProvider({ children }: UIMonthProviderProps) {
       // No saved selection, fetch default
       fetchData();
     }
-  }, [fetchData, loadSavedSelection]);
+  }, [isHydrated, fetchData, loadSavedSelection]);
 
   // REMOVED: Automatic polling that was causing rollback
   // The polling was fetching from API Gateway every 30 seconds and overwriting user selection
@@ -199,17 +210,20 @@ export function UIMonthProvider({ children }: UIMonthProviderProps) {
     await fetchData();
   }, [fetchData]);
 
-  // Derived values
+  // Derived values (with hydration safety)
   const currentMonth = config?.period || 'December 2025';
   const currentMonthName = config?.month || 'December';
   const currentYear = config?.year || '2025';
   const currentMonthAbbr = `${abbreviateMonthName(currentMonthName)} ${currentYear}`;
 
   // Generate abbreviated month options for dropdowns
-  const availableMonthsAbbr = availableMonths.map((m) => {
-    const abbr = abbreviateMonthName(m.month);
-    return `${abbr} ${m.year}`;
-  });
+  // HYDRATION FIX: Return stable fallback during SSR
+  const availableMonthsAbbr = isHydrated
+    ? availableMonths.map((m) => {
+        const abbr = abbreviateMonthName(m.month);
+        return `${abbr} ${m.year}`;
+      })
+    : ['Dec 2025', 'Nov 2025', 'Oct 2025']; // Fallback for SSR
 
   const value: UIMonthContextType = {
     currentMonth,
